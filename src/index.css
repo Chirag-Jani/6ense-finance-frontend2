@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-number-field[type="number"]::-webkit-inner-spin-button,
+.input-number-field[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.fontStyle {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.list-item-hover .list-item-hover-open {
+  display: none;
+}
+.list-item-hover:hover .list-item-hover-open {
+  display: block;
+}
+
+/* cube css */
+
+/* src/components/Cube.css */
+.scene {
+  width: 100px;
+  height: 100px;
+  perspective: 400px;
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 5s infinite linear;
+}
+
+.cube-face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cube-face-front {
+  transform: translateZ(50px);
+}
+.cube-face-back {
+  transform: rotateY(180deg) translateZ(50px);
+}
+.cube-face-left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+.cube-face-right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+.cube-face-top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+.cube-face-bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+/* dark and light mode */
+
+.darkModeFistColor {
+  color: #e5e7eb;
+  background-color: #101013;
+}
+.darkModeFistColor p,
+.darkModeFistColor h1,
+.darkModeFistColor h2,
+.darkModeFistColor h3,
+.darkModeFistColor h4,
+.darkModeFistColor h5,
+.darkModeFistColor h6 {
+  color: #b5b6b7;
+}
+.darkModeFistColor button {
+  color: #b5b6b7;
+  background-color: #4b4b54;
+  border: 1px solid #5c5c62;
+}
+.darkModeFistColor input {
+  color: #d0d0d1;
+  background-color: #4b4b54;
+  border:1px solid #4b4b54 ;
+  }
+  .darkModeFistColor input:hover {
+  /* outline-color: #6254ff; */
+  background-color: #4b4b54;
+  border: 1px solid #948bf6;
+  
+}
+.darkModeFistColor input:focus {
+  outline: none;
+}
+.darkModeFistColor button:hover {
+  color: #b5b6b7;
+  background-color: #595963;
+  border: 1px solid #6a6a70;
+}
+
+.darkModeColor {
+  color: #e5e7eb;
+  background-color: #25252d;
+  border-top: 1px solid #2d2d37;
+  border-left: 1px solid #2d2d37;
+  border-right: 1px solid #2d2d37;
+  border-bottom: 2px solid #2d2d37;
+}
+.darkModeColorsN {
+  color: #e5e7eb;
+  background-color: #25252d;
+}
+
+.darkModeColor p,
+.darkModeColor h1,
+.darkModeColor h2,
+.darkModeColor h3,
+.darkModeColor h4,
+.darkModeColor h5,
+.darkModeColor h6 {
+  color: #b5b6b7;
+}
+.darkModeColor button {
+  color: #b5b6b7;
+  background-color: #4b4b54;
+  border: 1px solid #5c5c62;
+}
+.darkModeColor button:hover {
+  color: #b5b6b7;
+  background-color: #595963;
+  border: 1px solid #6a6a70;
+}
+
+.darkModeSecondColor {
+  color: #dcdde0;
+  background-color: #32323c;
+}
+
+.harvestIconColor {
+  color: #dcdde0;
+  background-color: #4b4b54;
+}
+/* 
+.darkModeSecondColor h1,h2,h3,h4,h5,h6,p{
+  color: #e5e7eb;
+
+} */
+
+
+.darkModeNavColor {
+  background-color: #101013;
+}
+
+.contentBorder {
+  border-color: #3a3a44;
+}
